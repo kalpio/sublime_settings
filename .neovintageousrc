@@ -1,0 +1,39 @@
+let mapleader=<Space>
+
+set relativenumber
+set number
+set ignorecase
+
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+noremap n nzz
+noremap N Nzz
+
+noremap <leader>y "+y
+noremap <leader>Y "+Y
+noremap <leader>p "+p
+noremap <leader>P "+P
+
+" LSP
+" Go To Definition
+nnoremap gd :LspSymbolDefinition<CR>
+" Go To Declaration
+nnoremap gD :LspSymbolDeclaration<CR>
+" Go To Type Definition
+nnoremap gy :LspSymbolTypeDefinition<CR>
+" Go To Implementation
+nnoremap gI :LspSymbolImplementation<CR>
+" Find All References
+nnoremap gA :LspSymbolReferences<CR>
+" Rename Symbol
+nnoremap grn :LspSymbolRename<CR>
+" Format File (buffer)
+nnoremap gfi :LspFormatDocument<CR>
+" Format Selection
+nnoremap gfI :LspFormatDocumentRange<CR>
+" Show Code Actions
+nnoremap g. :LspCodeActions<CR>
+
+" MISC
+" Reveal In Sidebar
+nnoremap <C-k>r :RevealInSideBar<CR>
